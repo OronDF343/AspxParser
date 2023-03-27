@@ -23,7 +23,7 @@ namespace AspxParser
             var name = match.Groups["tagname"].Value;
             var isEmpty = match.Groups["empty"].Success;
             var location = CreateLocation(match);
-            if (attributes.IsRunAtServer && "script".EqualsNoCase(name))
+            if (/*attributes.IsRunAtServer && */"script".EqualsNoCase(name))
             {
                 if (!isEmpty)
                 {
