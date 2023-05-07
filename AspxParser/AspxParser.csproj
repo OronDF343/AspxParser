@@ -1,15 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Company>Positive Technologies</Company>
-    <Authors>Positive Technologies</Authors>
-  </PropertyGroup>
-  
-  <Import Condition="Exists('$(SolutionDir)AspxParser.props')" Project="$(SolutionDir)AspxParser.props" />
-  
-  <ItemGroup>
-    <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<Authors>Positive Technologies; Oron Feinerman</Authors>
+		<Description>ASPX parser library.</Description>
+		<PackageTags>ASPX;Parser;WebFroms</PackageTags>
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<FileVersion>1.0.0</FileVersion>
+		<!--Create xml-doc-->
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+		<!--Include symbols in NuGet-->
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<Import Condition="Exists('$(SolutionDir)AspxParser.props')" Project="$(SolutionDir)AspxParser.props" />
+
+	<ItemGroup>
+		<PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
+	</ItemGroup>
 
 </Project>
