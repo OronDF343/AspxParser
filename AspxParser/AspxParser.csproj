@@ -6,9 +6,9 @@
 		<Authors>Positive Technologies; Oron Feinerman</Authors>
 		<Description>ASPX parser library.</Description>
 		<PackageTags>ASPX;Parser;WebFroms</PackageTags>
-		<Version>1.0.0</Version>
-		<AssemblyVersion>1.0.0</AssemblyVersion>
-		<FileVersion>1.0.0</FileVersion>
+		<Version>1.0.1</Version>
+		<AssemblyVersion>1.0.1</AssemblyVersion>
+		<FileVersion>1.0.1</FileVersion>
 		<!--Create xml-doc-->
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 		<!--Include symbols in NuGet-->
@@ -19,7 +19,7 @@
 	<Import Condition="Exists('$(SolutionDir)AspxParser.props')" Project="$(SolutionDir)AspxParser.props" />
 
 	<ItemGroup>
-		<PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
+		<PackageReference Include="System.Collections.Immutable" Version="6.0.0" />
 	</ItemGroup>
 
 </Project>
