@@ -7,7 +7,19 @@ namespace AspxParser
     {
         public Tuple<Location, string, TagAttributes> TryParseDirective()
         {
-            var match = directiveRegex.Match(text);
+            var pos = 0;
+            var cmntMatch = commentRegex.Match(text, pos);
+            var wspcMatch = whitespaceRegex.Match(text, pos);
+            while (cmntMatch.Success || wspcMatch.Success)
+            {
+                if (cmntMatch.Success)
+                    pos = cmntMatch.Index + cmntMatch.Length;
+                if (wspcMatch.Success)
+                    pos = wspcMatch.Index + wspcMatch.Length;
+                cmntMatch = commentRegex.Match(text, pos);
+                wspcMatch = whitespaceRegex.Match(text, pos);
+            }
+            var match = directiveRegex.Match(text, pos);
             if (match.Success)
             {
                 var location = CreateLocation(match);

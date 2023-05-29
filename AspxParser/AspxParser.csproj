@@ -6,9 +6,9 @@
 		<Authors>Positive Technologies; Oron Feinerman</Authors>
 		<Description>ASPX parser library.</Description>
 		<PackageTags>ASPX;Parser;WebFroms</PackageTags>
-		<Version>1.0.1</Version>
-		<AssemblyVersion>1.0.1</AssemblyVersion>
-		<FileVersion>1.0.1</FileVersion>
+		<Version>1.0.4</Version>
+		<AssemblyVersion>1.0.4</AssemblyVersion>
+		<FileVersion>1.0.4</FileVersion>
 		<!--Create xml-doc-->
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 		<!--Include symbols in NuGet-->

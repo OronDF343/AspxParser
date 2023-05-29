@@ -51,5 +51,9 @@ namespace AspxParser
         private static readonly Regex textRegex = new Regex(
             "\\G[^<]+",
             Compiled | Multiline | Singleline, TimeSpan.FromTicks(-10000L));
+
+        private static readonly Regex whitespaceRegex = new Regex(
+            "\\G\\s+",
+            Compiled | Multiline | Singleline, TimeSpan.FromTicks(-10000L));
     }
 }
